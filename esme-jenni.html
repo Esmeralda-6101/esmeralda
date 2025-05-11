@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reel de Tienda</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      background: #c39bd3;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Barra lateral de redes sociales */
+    .social {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .social ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social ul li {
+      margin: 15px 0;
+    }
+
+    .social ul li a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: #1b2631;
+      font-size: 20px;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .social ul li a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Carrusel estilo reel */
+    .reel-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .reel-inner {
+      display: flex;
+      width: 1800px; /* 6 imágenes x 300px */
+      height: 100%;
+      animation: slide 18s infinite;
+    }
+
+    .reel-inner img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      16% { transform: translateX(0); }
+
+      17% { transform: translateX(-300px); }
+      33% { transform: translateX(-300px); }
+
+      34% { transform: translateX(-600px); }
+      50% { transform: translateX(-600px); }
+
+      51% { transform: translateX(-900px); }
+      67% { transform: translateX(-900px); }
+
+      68% { transform: translateX(-1200px); }
+      83% { transform: translateX(-1200px); }
+
+      84% { transform: translateX(-1500px); }
+      100% { transform: translateX(-1500px); }
+    }
+
+    .access-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #0056b3;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .access-button:hover {
+      background-color: #003f87;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Barra social lateral -->
+  <div class="social">
+    <ul>
+      <li><a href="https://www.facebook.com/share/1ALwi3NxJa/?mibextid=wwXIfr""><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.tiktok.com/@detallesmilhojas?_t=ZS-8wAkNQZAtJn&_r=1"><i class="fab fa-tiktok"></i></a></li>
+      <li><a href="https://www.instagram.com/detalles_milhojas?igsh=MWdjNnYzdDY4bGYybw=="><i class="fab fa-instagram"></i></a></li>
+      <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- Reel tipo carrusel -->
+  <div class="reel-container">
+    <div class="reel-inner">
+      <img src="milhojas.png" alt="Producto 1">
+      <img src="imagen1.jpg" alt="Producto 2">
+      <img src="imagen9.jpg" alt="Producto 3">
+      <img src="imagen14.jpg" alt="Producto 4">
+      <img src="imagen17.jpg" alt="Producto 5">
+      <img src="imagen39.jpg" alt="Producto 6">
+    </div>
+  </div>
+
+  <button class="access-button" onclick="window.location.href='file:///D:/Examen/barra%20social.html'">Acceder</button>
+
+</body>
+</html>

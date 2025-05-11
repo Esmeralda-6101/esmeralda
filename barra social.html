@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reel Circular de Tienda</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      background: #c39bd3;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Barra lateral de redes sociales */
+    .social {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .social ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .social ul li {
+      margin: 15px 0;
+    }
+
+    .social ul li a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: #1b2631;
+      font-size: 20px;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .social ul li a:hover {
+      transform: scale(1.2);
+    }
+
+    .reel-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      animation: spin 20s linear infinite;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+
+    .reel-container img {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+    }
+
+    /* Posiciones circulares de las imágenes */
+    .img1 { top: 0%; left: 50%; }
+    .img2 { top: 25%; left: 85%; }
+    .img3 { top: 75%; left: 85%; }
+    .img4 { top: 100%; left: 50%; }
+    .img5 { top: 75%; left: 15%; }
+    .img6 { top: 25%; left: 15%; }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .access-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: white;
+      background-color: #0056b3;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .access-button:hover {
+      background-color: #003f87;
+    }
+
+    /* Menú desplegable */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- Imagen centrada -->
+  <img src="milhojas.png" alt="Logo de Papelería Mil Hojas" style="width: 200px; height: auto; margin-bottom: 20px;">
+
+  <!-- Texto en movimiento -->
+  <div style="overflow: hidden; white-space: nowrap; width: 100%;">
+    <div style="display: inline-block; animation: moverTexto 10s linear infinite; font-size: 20px; color: #1b2631;">
+      ¡Bienvenidos a Papelería Mil Hojas! Donde cada hoja cuenta una historia...
+    </div>
+  </div>
+
+  <style>
+    @keyframes moverTexto {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+
+
+  <!-- Menú desplegable -->
+  <div class="navbar">
+    <div class="dropdown">
+      <a href="#">Quienes Somos</a>
+      <div class="dropdown-content">
+        <a href="file:///D:/Examen/Historia.html">Historia</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Servicios</a>
+      <div class="dropdown-content">
+        <a href="file:///D:/Examen/Servicios.html">Papeles de diferentes tipos </a>
+        <a href="file:///D:/Examen/Papeleria%20en%20general.html">Papeleria en General</a>
+	    <a href="file:///D:/Examen/Detalles%20personalizados.html">Detalles personalizados</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Eventos</a>
+      <div class="dropdown-content">
+        <a href="file:///D:/Examen/Demostraciones%20de%20impresion.html">Demostraciones de Impresión</a>
+        <a href="file:///D:/Examen/Feria%20de%20regalos.html">Ferias de regalos</a>
+		<a href="file:///D:/Examen/Lanzamiento%20de%20nuevos%20productos.html">Lanzamiento de Nuevos Productos</a>
+	    <a href="file:///D:/Examen/Decoraciones%20con%20globos.html">Decoraciones con globos</a>
+		<a href="file:///D:/Examen/Navidad.html">Navidad: Venta de regalos creativos, envolturas especiales</a>
+	    <a href="file:///D:/Examen/Regreso%20a%20clses.html">Regreso a clases (julio-agosto / enero-febrero)</a>
+		<a href="file:///D:/Examen/Dia%20de%20las%20madres.html">Día de las madres/padres: Manualidades personalizadas</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra social lateral -->
+  <div class="social">
+    <ul>
+      <li><a href="https://www.facebook.com/share/1ALwi3NxJa/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.tiktok.com/@detallesmilhojas?_t=ZS-8wAkNQZAtJn&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+      <li><a href="https://www.instagram.com/detalles_milhojas?igsh=MWdjNnYzdDY4bGYybw==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
